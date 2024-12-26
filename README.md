@@ -14,7 +14,7 @@ Kumander streamlines your workflow by turning complex, hard-to-remember commands
 
 ## Installation
 
-### Quick Install (Recommended)
+### Quick Install
 
 You can install Kumander directly using curl:
 
@@ -28,22 +28,25 @@ Or using wget:
 wget -qO- https://raw.githubusercontent.com/christopheredrian/kumander/main/install.sh | bash
 ```
 
-### Manual Installation
+This will install kumander to your ~/.kumander directory and add the necessary configuration to your shell configuration file.
 
-If you prefer to install manually:
+## Removing Kumander
 
+> **Warning**
+> This will remove all your commands and the Kumander directory as well, use with caution. Recommend to backup your ~/.kumander/commands before removing.
+ 
 ```bash
-# Clone the repository
-git clone https://github.com/christopheredrian/kumander.git ~/.kumander
-
-# Add to your shell configuration (~/.bashrc, ~/.zshrc, or ~/.bash_profile)
-echo 'export KUMANDER_COMMANDS_DIR="$HOME/.kumander/commands"' >> ~/.bashrc
-echo 'source $HOME/.kumander/kumander.sh' >> ~/.bashrc
-
-# Reload your shell configuration
-source ~/.bashrc
+rm -rf ~/.kumander
 ```
 
+Then on your shell configuration file (e.g. ~/.bashrc, ~/.zshrc, or ~/.bash_profile), remove the following lines:
+
+```bash
+# Kumander Configuration
+export KUMANDER_COMMANDS_DIR="$HOME/.kumander/commands"
+alias km='kumander'
+source $HOME/.kumander/kumander.sh
+```
 
 ## Usage
 
