@@ -3,14 +3,14 @@
 # shellcheck disable=SC2016,SC2086
 # Version: 1.0.0
 
-# Color constants
-readonly COLOR_RED="31"    # Error messages
-readonly COLOR_GREEN="32"  # Success/Commands
-readonly COLOR_YELLOW="33" # Warnings/Separators
-readonly COLOR_BLUE="36"   # Info messages
-readonly COLOR_WHITE="37"  # Normal text
-
 kumander() {
+    # Color constants
+    local COLOR_RED="31"    # Error messages
+    local COLOR_GREEN="32"  # Success/Commands
+    local COLOR_YELLOW="33" # Warnings/Separators
+    local COLOR_BLUE="36"   # Info messages
+    local COLOR_WHITE="37"  # Normal text
+
     local VERBOSE=0
     local COMMANDS_DIR="${KUMANDER_COMMANDS_DIR:-~/.kumander/commands}"
 
@@ -32,7 +32,7 @@ kumander() {
     }
 
     usage() {
-        echo_color "$COLOR_BLUE" "Usage: kumander [options] [file] [command]"
+        echo_color "$COLOR_BLUE" "Usage: kumander [file] [command]"
         echo_color "$COLOR_BLUE" "Options:"
         echo_color "$COLOR_BLUE" "  --help    Show this help message"
         echo_color "$COLOR_BLUE" "  --dir     Specify a custom commands directory"

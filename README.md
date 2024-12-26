@@ -23,7 +23,7 @@ curl -o- https://raw.githubusercontent.com/christopheredrian/kumander/main/insta
 Or using wget:
 
 ```bash
-wget -qO- https://raw.githubusercontent.com/christopheredrian/kumander/main/install-web.sh | bash
+wget -qO- https://raw.githubusercontent.com/christopheredrian/kumander/main/install.sh | bash
 ```
 
 ### Manual Installation
