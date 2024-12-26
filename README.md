@@ -10,6 +10,8 @@ Kumander is a powerful command-line tool for organizing and executing your frequ
 
 Kumander streamlines your workflow by turning complex, hard-to-remember commands into simple, intuitive actions. Perfect for developers, system administrators, and power users who want to boost their productivity at the command line.
 
+![Usage](assets/usage.gif)
+
 ## Installation
 
 ### Quick Install (Recommended)
