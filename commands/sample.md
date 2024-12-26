@@ -42,7 +42,7 @@ curl https://checkip.amazonaws.com && echo
 
 ## whats
 
-Display the weather in Atlanta and your public IP address.
+Display the weather in Atlanta and your public IP address (demo on using multiple commands in the same file).
 
 ```bash
 kumander sample whatstheweather
@@ -62,7 +62,7 @@ echo "Memory: $(free -h | awk '/^Mem:/ {print $2}')"
 
 ## dockermanage
 
-List, start, or stop Docker containers.
+List, start, or stop Docker containers (demo on using variables).
 
 ```bash
 case "$1" in

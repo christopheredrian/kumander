@@ -46,7 +46,10 @@ source ~/.bashrc
 ## Usage
 
 ```bash
-./kumander [options] [file] [command]
+kumander [file] [command]
+
+# or using the alias
+km [file] [command]
 ```
 
 Options:
@@ -60,19 +63,27 @@ Examples:
 
 ## Configuration
 
-By default, Kumander looks for command files in the `commands` directory. You can customize this by setting the `KUMANDER_COMMANDS_DIR` environment variable or using the `--dir` option.
+By default, Kumander looks for command files in the `commands` directory. You can customize this by setting the `KUMANDER_COMMANDS_DIR` environment variable or using the `--dir` option  (for temporary use).
 
 ## Creating Command Files
 
-Create markdown files in your commands directory with the following structure:
+Open the commands directory: `~/.kumander/commands` e.g. `code ~/.kumander/commands`
+
+Create markdown files in your commands directory with the following structure (defaults to ~/.kumander/commands):
+
+For example, create a file called `my-commands.md` and add the following content:
 
 ```markdown
-## Command Name
+# Listing commands 
+
+## ls-home
 Command description
 
 ```bash
-actual command to execute
+ls -la ~
 ```
+
+To run the command: `km my-commands ls-home`
 
 ## Contributing
 
