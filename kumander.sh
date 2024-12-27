@@ -216,3 +216,4 @@ _kumander_completions()
 }
 
 complete -F _kumander_completions kumander
+complete -F _kumander_completions km
